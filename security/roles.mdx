@@ -1,0 +1,52 @@
+---
+title: "Roles & permissions"
+description: "Role-based access control in MASLOW — what each role can see and do"
+---
+
+## Role overview
+
+MASLOW uses role-based access control (RBAC) to ensure users only access what they need. There are three roles:
+
+| Role | Description |
+|------|-------------|
+| **Admin** | Clinic administrator — manages users, settings, and survey templates |
+| **Provider** | Clinician — creates surveys, assigns to patients, reviews AI reports |
+| **Patient** | End user — completes assigned surveys |
+
+## Permission matrix
+
+{/* TODO: Verify these permissions against actual RBAC implementation */}
+
+| Action | Admin | Provider | Patient |
+|--------|:-----:|:--------:|:-------:|
+| Configure clinic settings | ✅ | ❌ | ❌ |
+| Invite/manage users | ✅ | ❌ | ❌ |
+| Manage survey templates | ✅ | ❌ | ❌ |
+| Create custom surveys | ✅ | ✅ | ❌ |
+| Assign surveys to patients | ✅ | ✅ | ❌ |
+| View AI reports | ✅ | ✅ (own patients) | ❌ |
+| Complete surveys | ❌ | ❌ | ✅ |
+| View own survey responses | ❌ | ❌ | ✅ |
+| View audit logs | ✅ | ❌ | ❌ |
+
+## Role assignment
+
+{/* TODO: How are roles assigned — during invitation? Can they be changed? */}
+
+Roles are assigned when a user is invited to MASLOW. Admin users control role assignments for their clinic.
+
+### Provider scope
+
+{/* TODO: Confirm provider data isolation — can providers see all patients or only assigned? */}
+
+Providers can only view data for patients assigned to them. They cannot access other providers' patients or clinic-wide analytics (unless also granted admin access).
+
+### Patient scope
+
+Patients can only access their own surveys and responses. They cannot see other patients' data or any provider/admin interfaces.
+
+## Multi-clinic access
+
+{/* TODO: Can users belong to multiple clinics? How does that work? */}
+
+Users are scoped to a single clinic. If a provider works at multiple clinics using MASLOW, they need separate accounts for each.

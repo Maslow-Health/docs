@@ -1,0 +1,66 @@
+---
+title: "Data handling & encryption"
+description: "How MASLOW encrypts, stores, and manages patient health data"
+---
+
+## Encryption
+
+### In transit
+
+All data transmitted between clients and MASLOW servers is encrypted using TLS 1.2 or higher. This includes:
+
+- Patient survey submissions
+- Provider dashboard access
+- API communications
+- Email notifications (via TLS-enabled email providers)
+
+### At rest
+
+{/* TODO: Confirm specific encryption details — KMS key management, database encryption */}
+
+All stored data is encrypted using AES-256 encryption. This covers:
+
+- Database records (survey responses, patient profiles, reports)
+- File storage (exported reports, attachments)
+- Backups and archives
+
+## Data storage
+
+{/* TODO: Confirm AWS region, data residency details */}
+
+- **Location** — data stored in AWS US regions
+- **Database** — managed database services with automated backups
+- **Isolation** — tenant data is logically isolated
+
+## Data retention
+
+{/* TODO: Confirm retention policies — how long is data kept, can clinics configure this */}
+
+MASLOW retains clinical data in accordance with applicable healthcare record retention requirements. Default retention periods:
+
+| Data type | Retention period |
+|-----------|-----------------|
+| Survey responses | Per clinic policy (minimum as required by state law) |
+| AI reports | Same as survey responses |
+| User accounts | Until deactivated + retention period |
+| Audit logs | Minimum 6 years |
+
+{/* TODO: Confirm these retention periods */}
+
+## Audit logging
+
+All access to patient data is logged, including:
+
+- Who accessed the data
+- When the access occurred
+- What action was performed (view, export, etc.)
+
+{/* TODO: Can admins view audit logs? How? */}
+
+Audit logs are retained for a minimum of 6 years in compliance with HIPAA requirements.
+
+## Data deletion
+
+{/* TODO: Detail deletion process — how to request, timeline, what gets permanently removed */}
+
+Patients can request deletion of their data by contacting their healthcare provider. Deletion requests are processed in accordance with applicable healthcare record retention laws.

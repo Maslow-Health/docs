@@ -1,0 +1,52 @@
+---
+title: "Security overview"
+description: "How MASLOW protects patient data and maintains a strong security posture"
+---
+
+## Built for healthcare
+
+MASLOW is designed from the ground up to handle sensitive health information securely. This page summarizes our approach to security across the platform.
+
+### Infrastructure
+
+{/* TODO: Confirm infrastructure details — AWS region, SOC 2 status, etc. */}
+
+- **Cloud hosting** — hosted on AWS with infrastructure designed for healthcare workloads
+- **Encryption in transit** — all data transmitted over TLS 1.2+
+- **Encryption at rest** — all stored data encrypted using AES-256
+- **Network isolation** — backend services run in private subnets with no direct internet access
+
+### Authentication
+
+{/* TODO: Confirm auth details — Cognito, MFA options */}
+
+- **Provider/admin authentication** — secure login with email and password via AWS Cognito
+- **Patient access** — magic link authentication (no passwords to steal or phish)
+- **Session management** — automatic session expiration and secure token handling
+
+### Access control
+
+- **Role-based access** — three roles (admin, provider, patient) with the principle of least privilege
+- **Data isolation** — patients can only see their own data; providers see only their assigned patients
+
+See [Roles & permissions](/security/roles) for the full access control breakdown.
+
+## Compliance
+
+<CardGroup cols={2}>
+
+<Card title="HIPAA compliance" icon="hospital" href="/security/hipaa">
+  How MASLOW meets HIPAA requirements for protected health information.
+</Card>
+
+<Card title="Data handling" icon="database" href="/security/data">
+  Encryption, data retention, and audit logging details.
+</Card>
+
+</CardGroup>
+
+## Reporting a security concern
+
+{/* TODO: Add security contact email or responsible disclosure process */}
+
+If you discover a potential security issue, please contact us immediately at **security@maslowhealth.com**.

@@ -1,68 +1,67 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "MASLOW Health",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#667eea",
+    "light": "#667eea",
+    "dark": "#764ba2"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Welcome",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "For admins",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "admin/setup",
+              "admin/users",
+              "admin/surveys"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "For providers",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "providers/dashboard",
+              "providers/surveys",
+              "providers/assignments",
+              "providers/reports"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "For patients",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "patients/getting-started",
+              "patients/surveys",
+              "patients/privacy"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Security & compliance",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Trust",
             "pages": [
-              "api-reference/introduction"
+              "security/overview",
+              "security/hipaa",
+              "security/data"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Access control",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "security/roles"
             ]
           }
         ]
@@ -72,51 +71,25 @@
       "anchors": [
         {
           "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "href": "/",
           "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/maslow-health-light.svg",
+    "dark": "/logo/maslow-health-dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@maslowhealth.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+    ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

@@ -1,0 +1,52 @@
+---
+title: "HIPAA compliance"
+description: "How MASLOW meets HIPAA requirements for handling protected health information"
+---
+
+## HIPAA overview
+
+{/* TODO: Confirm BAA status, covered entity vs. business associate relationship */}
+
+MASLOW operates as a business associate under HIPAA. We execute Business Associate Agreements (BAAs) with all covered entity clients and maintain safeguards required under the HIPAA Security Rule.
+
+## Technical safeguards
+
+| Safeguard | Implementation |
+|-----------|---------------|
+| **Access control** | Role-based access, unique user IDs, automatic session timeout |
+| **Audit controls** | All access to PHI is logged with timestamps and user identity |
+| **Integrity controls** | Data validation, checksums, and version tracking |
+| **Transmission security** | TLS 1.2+ for all data in transit |
+
+{/* TODO: Confirm specific implementations and add detail */}
+
+## Administrative safeguards
+
+{/* TODO: Detail administrative safeguards — training, policies, incident response */}
+
+- **Workforce training** — all MASLOW team members receive HIPAA training
+- **Access management** — access to production systems restricted to authorized personnel
+- **Incident response** — documented procedures for identifying and responding to security incidents
+- **Risk assessments** — regular security risk assessments conducted
+
+## Physical safeguards
+
+{/* TODO: Confirm physical safeguards — AWS handles most of this */}
+
+MASLOW infrastructure runs on AWS, which maintains physical security controls including:
+
+- Data center access controls
+- Environmental protections
+- Equipment disposal procedures
+
+## Breach notification
+
+{/* TODO: Detail breach notification process and timeline */}
+
+In the event of a breach involving PHI, MASLOW follows HIPAA breach notification requirements, including timely notification to affected covered entities.
+
+## Questions
+
+For questions about MASLOW's HIPAA compliance, contact **compliance@maslowhealth.com**.
+
+{/* TODO: Confirm compliance contact email */}
